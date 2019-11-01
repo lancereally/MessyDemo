@@ -1,7 +1,7 @@
-package org.lanqiao.controller;
+package org.lancereally.controller;
 
-import org.lanqiao.entity.User;
-import org.lanqiao.util.RedisUtil;
+import org.lancereally.entity.User;
+import org.lancereally.util.RedisUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

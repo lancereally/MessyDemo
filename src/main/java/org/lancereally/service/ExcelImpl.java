@@ -1,4 +1,4 @@
-package org.lanqiao.service;
+package org.lancereally.service;
 
 import java.util.ArrayList;
 
@@ -10,9 +10,9 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
-import org.lanqiao.entity.Person;
+import org.lancereally.entity.Person;
 
-public class ExcleImpl {
+public class ExcelImpl {
 
     public void export(String[] titles, ServletOutputStream out) throws Exception{
         try{
@@ -39,7 +39,7 @@ public class ExcleImpl {
             }
 
             // 第五步，写入实体数据
-            Person  person1=new Person("1","张三","123","26");
+            Person person1=new Person("1","张三","123","26");
             Person  person2=new Person("2","李四","123","18");
             Person  person3=new Person("3","王五","123","77");
             Person  person4=new Person("4","徐小筱","123","1");

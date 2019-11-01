@@ -1,4 +1,4 @@
-package org.lanqiao.entity;
+package org.lancereally.entity;
 
 import java.io.Serializable;
 
