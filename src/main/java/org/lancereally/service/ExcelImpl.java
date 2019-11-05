@@ -42,9 +42,9 @@ public class ExcelImpl {
             Person person1=new Person("1","张三","123","26");
             Person  person2=new Person("2","李四","123","18");
             Person  person3=new Person("3","王五","123","77");
-            Person  person4=new Person("4","徐小筱","123","1");
+            Person  person4=new Person("4","lancereally","123","1");
 
-            //这里我把list当做数据库啦
+            //这里把list当做数据库
             ArrayList<Person>  list=new ArrayList<Person>();
             list.add(person1);
             list.add(person2);

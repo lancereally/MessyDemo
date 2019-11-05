@@ -26,8 +26,8 @@ public class ExcelController {
         try{
             ServletOutputStream out=response.getOutputStream();
             try {
-                //设置文件头：最后一个参数是设置下载文件名(这里我们叫：张三.pdf)
-                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(name+".xls", "UTF-8"));
+                //设置文件头：最后一个参数是设置下载文件名(这里设置：张三.xls)
+                response.setHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(id+name+".xls", "UTF-8"));
             } catch (UnsupportedEncodingException e1) {
                 e1.printStackTrace();
             }
