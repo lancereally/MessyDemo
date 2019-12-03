@@ -1,31 +1,35 @@
 package org.lancereally.controller;
 
+import com.alibaba.fastjson.JSON;
 import org.lancereally.entity.User;
 import org.lancereally.util.RedisUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.spring.web.json.Json;
 
 import javax.annotation.Resource;
 
-@Controller
+@RestController
 public class UserController {
 
     @Resource
     RedisUtil redisUtil;
-
+//记得开启redis
     @RequestMapping("/set")
     public String set(){
         User user = new User(1,"tom","qwe");
         redisUtil.set("user1",user);
         redisUtil.set("user2",user);
-        return "";
+        return "success";
     }
 
     @RequestMapping("/get")
-    public String get(){
+    public User get(){
         User user = (User) redisUtil.get("user1");
         User user1 = (User) redisUtil.get("user2");
-        return "";
+        String str = JSON.toJSONString(user);
+        return user;
     }
 
 
