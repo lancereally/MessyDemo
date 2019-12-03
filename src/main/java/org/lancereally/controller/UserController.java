@@ -18,7 +18,7 @@ public class UserController {
 //记得开启redis
     @RequestMapping("/set")
     public String set(){
-        User user = new User(1,"tom","qwe");
+        User user = new User(22,"lancereally","130530xdf");
         redisUtil.set("user1",user);
         redisUtil.set("user2",user);
         return "success";
