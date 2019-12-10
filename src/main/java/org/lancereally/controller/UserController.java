@@ -25,7 +25,7 @@ public class UserController {
         System.out.println(user);
         redisUtil.set("user1",user);
         redisUtil.set("user2",user);
-        return user.toString();
+        return "Redises Success";
     }
 
     @RequestMapping("/get")
