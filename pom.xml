@@ -95,6 +95,13 @@
             <classifier>jdk15</classifier>
         </dependency>
 
+<!--       lombok @Data注解-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+        </dependency>
+
     </dependencies>
 
     <build>

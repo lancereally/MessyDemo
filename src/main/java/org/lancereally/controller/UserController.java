@@ -18,10 +18,14 @@ public class UserController {
 //记得开启redis
     @RequestMapping("/set")
     public String set(){
-        User user = new User(22,"lancereally","130530xdf");
+        User user = new User();
+        user.setId(22);
+        user.setName("lancereally");
+        user.setPassword("130530xdf");
+        System.out.println(user);
         redisUtil.set("user1",user);
         redisUtil.set("user2",user);
-        return "success";
+        return user.toString();
     }
 
     @RequestMapping("/get")
