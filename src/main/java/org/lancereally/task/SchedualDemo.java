@@ -3,6 +3,7 @@ package org.lancereally.task;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+//（把普通pojo实例化到spring容器中，相当于配置文件中的 <bean id="" class=""/>）
 @Component
 public class SchedualDemo {
     @Scheduled(cron = "*/60 * * * * *")
