@@ -12,8 +12,8 @@ public class User implements Serializable,Cloneable{
     private String password;
     private Person person;
 
-    //序列号 （浅拷贝可注释
-    private static final long serialVersionUID = -2232725257771333130L;
+    //序列号 idea根据类的路径、参数、方法自动生成的64位哈希serialVersonUID （浅拷贝可注释
+    private static final long serialVersionUID = 637519722946569204L;
 
     //重写Object.clone方法,否则只有Object对象能够clone （使用深拷贝可注释
 //    @Override

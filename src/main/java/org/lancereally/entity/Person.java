@@ -3,14 +3,14 @@ package org.lancereally.entity;
 import java.io.Serializable;
 
 public class Person implements Serializable {
-//通过实现序列化进行深拷贝 （可注释
+    //通过实现序列化进行深拷贝 （可注释
     private String id;
     private String name;
     private String password;
     private String age;
 
-    //序列号 （浅拷贝可注释
-    private static final long serialVersionUID = 4477679176385287943L;
+    //序列号 idea根据类的路径、参数、方法自动生成的64位哈希serialVersonUID （浅拷贝可注释
+    private static final long serialVersionUID = -6870830979483685819L;
 
     //重写Object.clone方法,实现二次浅拷贝 （可注释
 //    @Override

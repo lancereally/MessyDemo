@@ -1,11 +1,13 @@
 package org.lancereally.controller;
 
 import com.alibaba.fastjson.JSON;
+import org.hibernate.hql.spi.id.TableBasedDeleteHandlerImpl;
 import org.lancereally.entity.Person;
 import org.lancereally.entity.User;
 import org.lancereally.util.DeepCloneUtil_Serial;
 import org.lancereally.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +26,7 @@ public class UserController {
 //记得开启redis
     @RequestMapping("/set")
     public String set(){
-        //重写了构造方法，需要一次性赋值所有
+        //重写了Person类构造方法，需要一次性赋值所有
         Person person = new Person("","","","");
         person.setId("23333");
         User user = new User();
@@ -33,9 +35,14 @@ public class UserController {
         user.setPassword("130530xdf");
         user.setPerson(person);
         System.out.println(user);
-        redisUtil.set("user1",user);
-        redisUtil.set("user2",user);
-        return "Redises Success";
+        try {
+            redisUtil.set("user1",user);
+            redisUtil.set("user2",user);
+            return "Redises Success";
+        }catch (Exception e){
+            e.printStackTrace();
+            return "FAIL!";
+        }
     }
 
     @RequestMapping("/get")
@@ -140,5 +147,9 @@ public class UserController {
                  缺点:由于序列化的过程需要跟磁盘打交道,因此效率会低于clone方式*/
     }
 
+    @RequestMapping("/schedual")
+    public void Schedual(){
+
+    }
 
 }
