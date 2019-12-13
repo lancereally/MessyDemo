@@ -6,8 +6,6 @@ import org.lancereally.entity.Person;
 import org.lancereally.entity.User;
 import org.lancereally.util.DeepCloneUtil_Serial;
 import org.lancereally.util.RedisUtil;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -147,9 +145,6 @@ public class UserController {
                  缺点:由于序列化的过程需要跟磁盘打交道,因此效率会低于clone方式*/
     }
 
-    @RequestMapping("/schedual")
-    public void Schedual(){
 
-    }
 
 }
