@@ -21,6 +21,7 @@ public class ThreadDemo {
     }
 }
 
+//内部类
 class MyThreads{
     static boolean flag = true;
 //子线程
